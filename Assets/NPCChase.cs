@@ -23,7 +23,7 @@ public class NPCChase : MonoBehaviour
             agent.SetDestination(player.position); 
         }
     }
-
+    /*
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -34,4 +34,13 @@ public class NPCChase : MonoBehaviour
         }
         
     }
+    */
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            FindObjectOfType<GameManager>().GameOver();
+        }
+    }
+
 }

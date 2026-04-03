@@ -19,6 +19,10 @@ public class FirstPersonController : MonoBehaviour
 
         cameraTransform.parent = transform; 
 
+        //hide the cursor and lock it and place
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
     }
 
     void Update()

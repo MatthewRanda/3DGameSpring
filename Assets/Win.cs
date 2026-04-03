@@ -1,8 +1,8 @@
 using UnityEngine;
 
 public class Win : MonoBehaviour
-{
-    private void OnEnter(Collider other)
+{                //changed from OnEnter
+    private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
         {

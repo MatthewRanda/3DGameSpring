@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     public void Win()
     {
         winPanel.SetActive(true); 
-        Time.timeScale  -= 0f; 
+        Time.timeScale = 0f; //was set to '-= 0f' originally, dont work
     }
 
     public void Restart()
