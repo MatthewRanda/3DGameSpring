@@ -25,6 +25,8 @@ public class FirstPersonController : MonoBehaviour
     {
 
         if(Time.timeScale == 0 ) return; 
+
+        if (controller == null || !controller.enabled) return ; 
         
         float moveX = Input.GetAxis("Horizontal") * moveSpeed; 
 
